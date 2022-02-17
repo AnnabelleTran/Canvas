@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <canvas id="doodle" width="500" height="500""></canvas>
+<script>
+
+    var canvas = document.getElementById("doodle");
+    var ctx = canvas.getContext('2d');
+        ctx.lineWidth = 10;
+            ctx.beginPath();
+                ctx.arc(250, 250, 200, 0, Math.PI * 2, true); 
+                ctx.fillStyle = "white";
+                ctx.fill();
+            ctx.moveTo(300, 270);
+                ctx.arc(250, 270, 100, 0, Math.PI, false); 
+                ctx.lineTo(330, 270);
+            ctx.moveTo(270, 3000);
+                ctx.fillStyle = "yellow";
+                ctx.fill();
+            ctx.stroke();
+            
+            ctx.beginPath();
+                ctx.arc(100, 200, 10, 0, Math.PI * 2, true); 
+                ctx.fillStyle = "black";
+                ctx.fill();
+            ctx.moveTo(170, 212);
+                ctx.arc(400, 200, 10, 0, Math.PI * 2, false);
+                ctx.fillStyle = "black";
+                ctx.fill();
+</script>
+</body>
+</html>
